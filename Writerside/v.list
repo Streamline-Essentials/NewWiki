@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vars SYSTEM "https://resources.jetbrains.com/writerside/1.0/vars.dtd">
+<vars>
+    <var name="product" value="Writerside"/>
+
+    <var name="sl.module.discordmodule.version" value="1.16.0"/>
+    <var name="sl.module.discordmodule.download" value="https://dl.dropboxusercontent.com/scl/fi/9hmleohh1fcbi22g86n0h/DiscordModule-1.16.0.jar?rlkey=g17zhwkoc65xzw0srtw1nm08w&st=2ya57plz&dl=0"/>
+    <var name="sl.module.discordmodule.description" value="A module dealing with Minecraft and Discord integration."/>
+
+    <var name="sl.module.mvinvextras.version" value="1.0.0"/>
+    <var name="sl.module.mvinvextras.download" value="https://dl.dropboxusercontent.com/scl/fi/gdy1fhzco3harvpqhso36/MVInvExtras-1.0.0.jar?rlkey=pn03cfm2z82lvsdio6h1f6nj5&st=qsmhdoqy&dl=0"/>
+    <var name="sl.module.mvinvextras.description" value="A module dealing with extra features for MVInv."/>
+
+    <var name="sl.module.proxprotect.version" value="1.0.0"/>
+    <var name="sl.module.proxprotect.download" value="https://dl.dropboxusercontent.com/scl/fi/povqminij0bsaodsgep7s/ProxProtect-1.0.0.jar?rlkey=ylz4o9ja4y35e2q3xi1wnzhyo&st=d27aa1qm&dl=0"/>
+    <var name="sl.module.proxprotect.description" value="A module dealing making sure that you do not get back-doored."/>
+
+    <var name="sl.module.rpu.version" value="1.13.0"/>
+    <var name="sl.module.rpu.download" value="https://dl.dropboxusercontent.com/scl/fi/kpbahacnyjaqb6r6p9n99/ResourcePackUtils-1.13.0.jar?rlkey=tp061p652mssjblol7848yt06&st=209v0b8m&dl=0"/>
+    <var name="sl.module.rpu.description" value="A module dealing with Minecraft resource packs."/>
+
+    <var name="sl.module.runon.version" value="1.0.0"/>
+    <var name="sl.module.runon.download" value="https://dl.dropboxusercontent.com/scl/fi/z5kbau05mevefen85jvr8/RunOn-1.0.0.jar?rlkey=d8esbqz0nfvkmmn4amj7l6wfq&st=0f6bvena&dl=0"/>
+    <var name="sl.module.runon.description" value="A module dealing with running commands on other servers (or the proxy)."/>
+
+    <var name="sl.module.simplelogger.version" value="1.1.0"/>
+    <var name="sl.module.simplelogger.download" value="https://dl.dropboxusercontent.com/scl/fi/7waarji17nd3b4czfmh6s/SimpleLogger-1.1.0.jar?rlkey=2jji2pqtoffon2uco5w5xvnh2&st=k4gt8qxp&dl=0"/>
+    <var name="sl.module.simplelogger.description" value="Logs all commands to Discord."/>
+
+    <var name="sl.module.streamersunite.version" value="1.0.0"/>
+    <var name="sl.module.streamersunite.download" value="https://dl.dropboxusercontent.com/scl/fi/960qqhsacb239widt0utn/StreamersUnite-1.0.0.jar?rlkey=blwyi08wqalxysld81k6aej2p&st=47wbedyr&dl=0"/>
+    <var name="sl.module.streamersunite.description" value="A module dealing with streamers."/>
+
+    <var name="sl.module.slmessaging.version" value="1.13.0"/>
+    <var name="sl.module.slmessaging.download" value="https://dl.dropboxusercontent.com/scl/fi/x59twtc8dlfjhsmr8qdhr/StreamlineMessaging-1.13.0.jar?rlkey=7plu1yymwa70ond7x19s49igv&st=kcceari1&dl=0"/>
+    <var name="sl.module.slmessaging.description" value="A module dealing with:
+
+- Network-wide or single server `/msg` ing.
+- Friending.
+    - Best friending.
+- Chat Channels.
+    - Staff Chats.
+    - Global Chats.
+    - Local Chats.
+    - Chat Rooms."/>
+
+    <var name="sl.module.slmotd.version" value="1.4.0"/>
+    <var name="sl.module.slmotd.download" value="https://dl.dropboxusercontent.com/scl/fi/4itnq7usmj3k8ol3twtgm/StreamlineMOTD-1.4.0.jar?rlkey=1o09b11j9fkq3dul3xo604yg9&st=7qoaheud&dl=0"/>
+    <var name="sl.module.slmotd.description" value="A module dealing with the MOTD.
+
+- An MOTD is what you see on your Minecraft server page when you are about to join your server."/>
+
+    <var name="sl.module.slredirect.version" value="1.5.0"/>
+    <var name="sl.module.slredirect.download" value="https://dl.dropboxusercontent.com/scl/fi/m11d9qksfzmtwtbey0nw5/StreamlineRedirect-1.5.0.jar?rlkey=kaxelxksknevj9kzjijx6u2ry&st=0cb6zilk&dl=0"/>
+    <var name="sl.module.slredirect.description" value="A module dealing with redirecting players after a server goes down.
+
+- Example:
+    - Redirecting players from `BEDWARS_HUB_1` to `LOBBY_1` when `BEDWARS_HUB_1` crashes or restarts."/>
+
+    <var name="sl.module.slutilities.version" value="1.18.0"/>
+    <var name="sl.module.slutilities.download" value="https://dl.dropboxusercontent.com/scl/fi/ud7avvkwqkiipsumh065e/StreamlineUtilities-1.18.0.jar?rlkey=ijvubcb1kn70f11gd7cut4cfg&st=zb697xpn&dl=0"/>
+    <var name="sl.module.slutilities.description" value="A module dealing with:
+
+- Functions / Scripts / Aliases.
+    - A way to run multiple commands in one command.
+    - Might also be known as a macro.
+- `/online` - See who is online on the server.
+- Permission groups.
+    - Not a permission plugin.
+    - Just assign groups to players based on permission.
+        - For formatting purposes.
+- Custom Placeholders.
+- Cross-Network teleportation.
+- Cross-Network homes.
+- Cross-Network tpa.
+- More…"/>
+
+    <var name="sl.module.streamquests.version" value="1.0.0"/>
+    <var name="sl.module.streamquests.download" value="https://dl.dropboxusercontent.com/scl/fi/4h545rswn9yhlnketmed2/StreamQuests-1.0.0.jar?rlkey=xb723hbg32w3fqivyu1azh2yz&st=zqv1e14q&dl=0"/>
+    <var name="sl.module.streamquests.description" value="A module dealing with Quests."/>
+
+    <var name="sl.module.tabsl.version" value="1.1.0"/>
+    <var name="sl.module.tabsl.download" value="https://dl.dropboxusercontent.com/scl/fi/7m7qpx93nc6hja4elym6a/TABSL-1.1.0.jar?rlkey=l4tdi4qf71spo8ip5go33q23z&st=ls8lpczg&dl=0"/>
+    <var name="sl.module.tabsl.description" value="A module dealing with Streamline compatibility with the TAB plugin.
+
+- Adds:
+    - Streamline placeholder support to TAB."/>
+</vars>
