@@ -9,7 +9,7 @@ BOU is a Bukkit plugin and API designed to ease the development process of makin
 ## How does it work?
 When downloading a plugin that uses BOU, you also need to install the BOU plugin itself. This can be found here: [https://www.spigotmc.org/resources/118276/](https://www.spigotmc.org/resources/118276/)
 
-It works by adding all of the necessary code for each plugin to work as a centralized plugin.
+It works by adding all the necessary code for each plugin to work as a centralized plugin.
 
 ## Natively Supported
 
@@ -57,7 +57,12 @@ repositories {
 
 #### Maven Repo
 ```XML
-to be added later
+<repositories>
+    <repository>
+        <id>jitpack</id>
+        <url>https://jitpack.io/</url>
+    </repository>
+</repositories>
 ```
 
 ### Add Dependencies
@@ -70,7 +75,13 @@ dependencies {
 
 #### Maven Dep
 ```XML
-to be added later
+<dependencies>
+    <dependency>
+        <groupId>com.github.Streamline-Essentials</groupId>
+        <artifactId>BukkitOfUtils</artifactId>
+        <version>master-SNAPSHOT</version>
+    </dependency>
+</dependencies>
 ```
 
 ### API Usage
