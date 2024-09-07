@@ -6,6 +6,7 @@
                  name="PlasHost"
                  start-page="StartPage.md">
 
+    <toc-element topic="Pacifism.md"/>
     <toc-element topic="StartPage.md"/>
     <toc-element topic="Streamline.md">
         <toc-element topic="modules.md"/>

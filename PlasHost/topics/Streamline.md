@@ -27,7 +27,7 @@ Here are the server types that are natively supported by the plugin.
 > - Velocity forks that don't modify core code.
 
 # Streamline Requirements
-There are requirements for **Velocity** and **Bungee**, while **Bukkit** requires two plugins.
+There are only one plugin requirement for **Velocity** and **Bungee**, while **Bukkit** requires two plugins.
 
 ### Bungee and Velocity Requirements
 > - **LuckPerms**
