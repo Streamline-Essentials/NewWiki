@@ -34,8 +34,7 @@ This offers a very simple configuration and setup all while remaining very light
     * Projectiles.
 * Configurable grace-period.
 
-### Commands
-
+## Commands
 ### Definitions
 `<required>` - "required" (literal) is required for the command to work.
 `(optional)` - "optional" (literal) is optional for the command to work.
