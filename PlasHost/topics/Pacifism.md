@@ -35,15 +35,40 @@ This offers a very simple configuration and setup all while remaining very light
 * Configurable grace-period.
 
 ### Commands
-`<required>`
-`(optional)`
+
+### Definitions
+`<required>` - "required" (literal) is required for the command to work.
+`(optional)` - "optional" (literal) is optional for the command to work.
+`"thing"` - thing is non-literal; meaning you specify something that "thing" describes. Such as a world name, or player name.
 
 * `/tpvp`
-    * `/tpvp (player)`
+    * `/tpvp ("player") (-f)`
         * Toggles PVP for a certain player or for yourself.
+        * Use `-f` to force toggling; meaning it will bypass the cooldown.
 * `/spvp`
-    * `/spvp <on/off> (player)`
+    * `/spvp <on/off> ("player") (-f)`
         * Sets PVP to on / off for a certain player or for yourself.
+        * Use `-f` to force setting; meaning it will bypass the cooldown.
+* `/worldwhitelist`
+    * `/worldwhitelist <set-as> <whitelist|blacklist>`
+        * Sets the whitelist to either be a **whitelist** (worlds in it are the only worlds that Pacifism works in) or a **blacklist** (worlds in it are excluded from Pacifism working in them).
+    * `/worldwhitelist <add/remove> ["world"]`
+        * Adds a world to the whitelist/blacklist.
+    * `/worldwhitelist <list>`
+        * Lists all worlds currently in the whitelist/blacklist.
+* `/setgracetime`
+    * `/setgracetime <"ticks"> ["player"]`
+        * Sets the gracetime in ticks for a certain player or for yourself.
+
+## Permissions
+- `pacifism.command.togglepvp` - Allows running the command `/tpvp`.
+- `pacifism.command.setpvp` - Allows running the command `/spvp`.
+- `pacifism.command.worldwhitelist` - Allows running the command `/worldwhitelist`.
+- `pacifism.command.setgracetime` - Allows running the command `/setgracetime`.
+- `pacifism.others.toggle` - Allows toggling other players' PVP.
+- `pacifism.others.set` - Allows setting other players' PVP to on or off.
+- `pacifism.others.gracetime` - Allows setting other players' gracetime.
+- `pacifism.force` - Allows toggling or setting PVP forcefully (bypasses cooldown).
 
 ## Configuration
 ### Config.yml
