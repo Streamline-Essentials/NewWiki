@@ -2,6 +2,9 @@
 <!DOCTYPE categories
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/categories.dtd">
 <categories>
+    <category id="start-page" name="Start Page" order="0"/>
     <category id="streamline" name="Streamline Documentation" order="1"/>
     <category id="bukkitofutils" name="BukkitOfUtils Documentation" order="2"/>
+    <category id="plugins" name="Plugin Documentation" order="3"/>
+    <category id="modpacks" name="Modpack Documentation" order="4"/>
 </categories>

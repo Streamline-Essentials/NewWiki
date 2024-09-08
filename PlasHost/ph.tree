@@ -4,13 +4,19 @@
 
 <instance-profile id="ph"
                  name="PlasHost"
-                 start-page="StartPage.md">
+                 start-page="start-page.md">
 
-    <toc-element topic="Pacifism.md"/>
-    <toc-element topic="StartPage.md"/>
-    <toc-element topic="Streamline.md">
+    <toc-element topic="start-page.md"/>
+    <toc-element topic="streamline.md">
         <toc-element topic="modules.md"/>
         <toc-element topic="placeholders.md"/>
     </toc-element>
-    <toc-element topic="BukkitOfUtils.md"/>
+    <toc-element topic="modpacks.md">
+        <toc-element topic="shadow-den.md"/>
+        <toc-element topic="finest-horror.md"/>
+    </toc-element>
+    <toc-element topic="plugins.md">
+        <toc-element topic="pacifism.md"/>
+    </toc-element>
+    <toc-element topic="bukkitofutils.md"/>
 </instance-profile>

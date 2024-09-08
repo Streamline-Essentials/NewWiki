@@ -7,7 +7,7 @@
 
 ## Projects
 *Click the following to go to their respective pages.*
-> - [**Streamline**](Streamline.md)
+> - [**Streamline**](streamline)
 >   - A powerful plugin suite for Minecraft servers.
-> - [**BukkitOfUtils**](BukkitOfUtils.md)
+> - [**BukkitOfUtils**](bukkitofutils)
 >   - A plugin and API to aid in Bukkit plugin development while specifically supporting Folia.
