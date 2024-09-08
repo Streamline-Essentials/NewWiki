@@ -1,6 +1,6 @@
 # Shadow Den Modpack
 ## Description
-Shadow Den is a Modpack originally made for the Shadow Den SMP.
+Shadow Den is a Modpack originally made for the Shadow Den SMP. It is a modpack for all types of players to enjoy. It has a variety of mods to keep you entertained for hours on end. It is also built for performance and stability with many performant mods.
 
 ## Installation
 > 1. Download CurseForge and install.
