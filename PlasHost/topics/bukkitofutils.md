@@ -31,6 +31,48 @@ Below are the platforms and versions that BOU supports so far.
 
 > - 1.7 to 1.21+
 
+## Fire Strings
+### What is a String?
+A string is a sequence of letters, numbers, and symbols.
+
+**Examples**
+- `Hello, World!`
+- `12345`
+
+A string is usually enclosed in double quotes (`"`).
+
+**Examples**
+- `"Hello my name is Drak and this is a very long string."`
+- `"t"`
+
+### What is a Fire String?
+A Fire String is a string of text that can be sent to the BOU plugin to execute a function.
+
+### Inputs for Fire Strings
+Fire Strings take an identifier and a string of text that will be used to execute a function.
+
+**Examples**
+Note: The following are the current complete list of Fire Strings (as examples) as of `9/18/2024 USA Date Format`.
+- `(console) save-all`
+    - This will run the command `/save-all` as the console.
+- `(player) Drakified spawn`
+    - This will run the command `/spawn` as the player with the name `Drakified`.
+- `(consolechat) save-all`
+    - This will run the command `/save-all` as the console.
+    - Might be used to chat as the console in later versions.
+- `(playerchat) Drakified Hi! I am Drak, and I am a developer.`
+  - This will send the message `Hi! I am Drak, and I am a developer.` as the player with the name `Drakified`.
+- `(message) Drakified &cHello, &lWorld!`
+    - This will send the message `&cHello, &lWorld!` to the player with the name `Drakified`.
+- `(title) Drakified &cHello\n&lWorld!`
+    - This will send a title to the player with the name `Drakified` with the title `&cHello` and the subtitle `&lWorld!`.
+- `(broadcast) &cHello, &lWorld!`
+  - This will broadcast the message `&cHello, &lWorld!` to all players on the server.
+  - This is a global message.
+- `(broadcasttitle) &cHello\n&lWorld!`
+  - This will send a title to all players on the server with the title `&cHello` and the subtitle `&lWorld!`.
+  - This is a global title.
+
 # For Developers
 
 *The plugin also comes with a nice API for developers to use.*
