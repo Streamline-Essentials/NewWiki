@@ -114,7 +114,7 @@ A module dealing with the MOTD.
 
 ### Quick Links (Streamline MOTD)
 
-- **Download:** [click here]()
+- **Download:** [click here](%sl.module.slmotd.download%)
 - **Wiki Page:** to be added
 
 ---
