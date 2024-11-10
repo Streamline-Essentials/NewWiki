@@ -16,6 +16,7 @@
         <toc-element topic="finest-horror.md"/>
     </toc-element>
     <toc-element topic="plugins.md">
+        <toc-element topic="JustTags.md"/>
         <toc-element topic="pacifism.md"/>
     </toc-element>
     <toc-element topic="bukkitofutils.md"/>
