@@ -73,6 +73,15 @@ Note: The following are the current complete list of Fire Strings (as examples) 
   - This will send a title to all players on the server with the title `&cHello` and the subtitle `&lWorld!`.
   - This is a global title.
 
+## Placeholders
+*You can use* [**PlaceholderAPI**](https://www.spigotmc.org/resources/6245/) *to use BOU's placeholders in other areas of your server!*
+#### Our Placeholders
+| Placeholder                     | Description                                                                                                              |
+|---------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| `%bou_expansions_loaded%`       | The amount of loaded BOU-dependant plugins on your server.                                                               |
+| `%bou_expansions_papi_loaded%`  | The amount of BOU's `BetterExpansion`s (PAPI Expansions, but enhanced) loaded on your server.                            |
+| `%bou_colored_<text to color>%` | Colorizes `<text to color>`. You can replace `<text to color>` with any string of text. Supports Hex (`#ff0000` -> Red)! |
+
 # For Developers
 
 *The plugin also comes with a nice API for developers to use.*

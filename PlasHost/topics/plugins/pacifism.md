@@ -69,6 +69,19 @@ This offers a very simple configuration and setup all while remaining very light
 - `pacifism.others.gracetime` - Allows setting other players' gracetime.
 - `pacifism.force` - Allows toggling or setting PVP forcefully (bypasses cooldown).
 
+## Placeholders
+*You can use* [**PlaceholderAPI**](https://www.spigotmc.org/resources/6245/) *to use Pacifism's placeholders in other areas of your server!*
+#### Our Placeholders
+| Placeholder                                                         | Description                                                                                                              |
+|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| `%pacifism_gracetime_left_ticks%`                                   | The amount of ticks (typically, 20 ticks = 1 second) left until the player has their pvp toggled. This shows an integer. |
+| `%pacifism_gracetime_left_ticks_fancy%`                             | Shows the ticks left, but in the fancy format you configured in the plugin's config.                                     |
+| `%pacifism_gracetime_left_seconds%`                                 | The amount of seconds left until the player has their pvp toggled. This shows an integer.                                |
+| `%pacifism_gracetime_left_seconds_fancy%`                           | Shows the seconds left, but in the fancy format you configured in the plugin's config.                                   |
+| `%pacifism_status_simple%`                                          | The status of the player's PVP. This will show either "true" or "false".                                                 |
+| `%pacifism_status_fancy%`                                           | The status of the player's PVP. This will show the value you set in the config depending on if it is true or false.      |
+| `%pacifism_as_<player>_<one of the above without the "pacifism_">%` | Does the above, but as `<player>`. Remember to replace the fields between the `<` and the `>` for both arguments.        |
+
 ## Configuration
 ### Config.yml
 ```YAML
@@ -94,6 +107,30 @@ player:
     # Should the plugin send the above message?
     # true = yes, send the message.
     send-message: true
+    # Countdown configuration.
+    countdown:
+      # If countdown is enabled.
+      enabled: true
+      # Commands to run at x ticks left.
+      commands:
+        '6000':
+          - '(message) %player_name% &7&oYou have &a&o5 &f&ominutes &7&oleft of your grace period.'
+        '1200':
+          - '(message) %player_name% &7&oYou have &a&o1 &f&ominute &7&oleft of your grace period.'
+        '600':
+          - '(message) %player_name% &7&oYou have &a&o30 &f&oseconds &7&oleft of your grace period.'
+        '300':
+          - '(message) %player_name% &7&oYou have &a&o15 &f&oseconds &7&oleft of your grace period.'
+        '100':
+          - '(message) %player_name% &7&oYou have &a&o5 &f&oseconds &7&oleft of your grace period.'
+        '80':
+          - '(message) %player_name% &a&o4 &f&oseconds&7&o...'
+        '60':
+          - '(message) %player_name% &a&o3 &f&oseconds&7&o...'
+        '40':
+          - '(message) %player_name% &a&o2 &f&oseconds&7&o...'
+        '20':
+          - '(message) %player_name% &a&o1 &f&osecond&7&o...'
   # When players are toggling PVP...
   toggle:
     # The cool-down after toggling PVP.
@@ -111,24 +148,24 @@ explosions:
   materials:
     # The list of materials to block.
     list:
-    - 'WHITE_BED'
-    - 'ORANGE_BED'
-    - 'MAGENTA_BED'
-    - 'LIGHT_BLUE_BED'
-    - 'YELLOW_BED'
-    - 'LIME_BED'
-    - 'PINK_BED'
-    - 'GRAY_BED'
-    - 'LIGHT_GRAY_BED'
-    - 'CYAN_BED'
-    - 'PURPLE_BED'
-    - 'BLUE_BED'
-    - 'BROWN_BED'
-    - 'GREEN_BED'
-    - 'RED_BED'
-    - 'BLACK_BED'
-    - 'TNT'
-    - 'RESPAWN_ANCHOR'
+      - 'WHITE_BED'
+      - 'ORANGE_BED'
+      - 'MAGENTA_BED'
+      - 'LIGHT_BLUE_BED'
+      - 'YELLOW_BED'
+      - 'LIME_BED'
+      - 'PINK_BED'
+      - 'GRAY_BED'
+      - 'LIGHT_GRAY_BED'
+      - 'CYAN_BED'
+      - 'PURPLE_BED'
+      - 'BLUE_BED'
+      - 'BROWN_BED'
+      - 'GREEN_BED'
+      - 'RED_BED'
+      - 'BLACK_BED'
+      - 'TNT'
+      - 'RESPAWN_ANCHOR'
     # The type of list to use.
     is-blacklist: false
     # The radius to check for players with pacifism on.
@@ -137,13 +174,50 @@ explosions:
   entities:
     # The list of entities to block.
     list:
-    - 'MINECART_TNT'
-    - 'PRIMED_TNT'
-    - 'ENDER_CRYSTAL'
+      - 'MINECART_TNT'
+      - 'PRIMED_TNT'
+      - 'ENDER_CRYSTAL'
     # The type of list to use.
     is-blacklist: false
     # The radius to check for players with pacifism on.
     radius: 15
+
+# PlaceholderAPI configuration.
+placeholders:
+  # Grace Period placeholders.
+  gracetime:
+    # Placeholder for the grace time left.
+    left:
+      # The time in ticks.
+      ticks:
+        # The simple placeholder.
+        simple: "%gracetime_left_ticks%"
+        # The fancy placeholder.
+        fancy: "&a%gracetime_left_ticks% &fticks"
+      # The time in seconds.
+      seconds:
+        # The simple placeholder.
+        simple: "%gracetime_left_seconds%"
+        # The fancy placeholder.
+        fancy: "&a%gracetime_left_seconds% &fseconds"
+  # PVP status placeholders.
+  status:
+    # Placeholder for when PVP is toggled off.
+    pvp-off:
+      # The simple placeholder.
+      # '%status_pvp%' will be replaced with the
+      # status of the player's PVP. (true/false)
+      simple: "%status_pvp%"
+      # The fancy placeholder.
+      fancy: "&c&lOFF"
+    # Placeholder for when PVP is toggled on.
+    pvp-on:
+      # The simple placeholder.
+      # '%status_pvp%' will be replaced with the
+      # status of the player's PVP. (true/false)
+      simple: "%status_pvp%"
+      # The fancy placeholder.
+      fancy: "&a&lON"
 
 # The plugin's database settings.
 database:
