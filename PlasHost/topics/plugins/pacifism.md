@@ -36,10 +36,11 @@ This offers a very simple configuration and setup all while remaining very light
 
 ## Commands
 ### Definitions
-`<required>` - "required" (literal) is required for the command to work.
-`(optional)` - "optional" (literal) is optional for the command to work.
-`"thing"` - thing is non-literal; meaning you specify something that "thing" describes. Such as a world name, or player name.
+* `<required>` - "required" (literal) is required for the command to work.
+* `(optional)` - "optional" (literal) is optional for the command to work.
+* `"thing"` - thing is non-literal; meaning you specify something that "thing" describes. Such as a world name, or player name.
 
+### Plugin Commands
 * `/tpvp`
     * `/tpvp ("player") (-f)`
         * Toggles PVP for a certain player or for yourself.
@@ -71,16 +72,37 @@ This offers a very simple configuration and setup all while remaining very light
 
 ## Placeholders
 *You can use* [**PlaceholderAPI**](https://www.spigotmc.org/resources/6245/) *to use Pacifism's placeholders in other areas of your server!*
+
+#### Time Units
+Use these as a key for the below placeholders.
+
+| Time Unit | Description            | Notes                 |
+|-----------|------------------------|-----------------------|
+| `ticks`   | The time in ticks.     | 20 ticks per 1 second |
+| `seconds` | The time in seconds.   |                       |
+| `minutes` | The time in minutes.   |                       |
+| `hours`   | The time in hours.     |                       |
+| `days`    | The time in days.      |                       |
+| `weeks`   | The time in weeks.     |                       |
+
 #### Our Placeholders
-| Placeholder                                                         | Description                                                                                                              |
-|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `%pacifism_gracetime_left_ticks%`                                   | The amount of ticks (typically, 20 ticks = 1 second) left until the player has their pvp toggled. This shows an integer. |
-| `%pacifism_gracetime_left_ticks_fancy%`                             | Shows the ticks left, but in the fancy format you configured in the plugin's config.                                     |
-| `%pacifism_gracetime_left_seconds%`                                 | The amount of seconds left until the player has their pvp toggled. This shows an integer.                                |
-| `%pacifism_gracetime_left_seconds_fancy%`                           | Shows the seconds left, but in the fancy format you configured in the plugin's config.                                   |
-| `%pacifism_status_simple%`                                          | The status of the player's PVP. This will show either "true" or "false".                                                 |
-| `%pacifism_status_fancy%`                                           | The status of the player's PVP. This will show the value you set in the config depending on if it is true or false.      |
-| `%pacifism_as_<player>_<one of the above without the "pacifism_">%` | Does the above, but as `<player>`. Remember to replace the fields between the `<` and the `>` for both arguments.        |
+| Placeholder                                                     | Description                                                                                                         | Examples                                             |
+|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| `%pacifism_gracetime_left_<time unit>%`                         | The amount of <time unit> left until the player has their pvp toggled. This shows an integer.                       | 120 ticks: `120`<br/>142 ticks: `7.1`                |
+| `%pacifism_gracetime_left_<time unit>_fancy%`                   | Shows the <time unit> left, but in the fancy format you configured in the plugin's config.                          | 6000 ticks: `5 minutes`<br/>65 ticks: `3.25 seconds` |
+| `%pacifism_gracetime_left_combined%`                            | Will show the full and formatted amount of grace time left.                                                         | 1221 ticks: `1 minute 1 second 1 tick`               |
+| `%pacifism_status_simple%`                                      | The status of the player's PVP. This will show either "true" or "false".                                            | `true`<br/>`false`                                   |
+| `%pacifism_status_fancy%`                                       | The status of the player's PVP. This will show the value you set in the config depending on if it is true or false. | `ON`<br/>`OFF`                                       |
+| `%pacifism_as_<player>_<one of the above without "pacifism_">%` | Does the above, but as `<player>`. Remember to replace the fields between the `<` and the `>` for both arguments.   | `%pacifism_as_Drakified_status_simple%`              |
+
+#### Formatting your Placeholders
+Use the following placeholders in your `placeholders` config section to format the output.
+
+| Placeholder                                       | Description                                                        |
+|---------------------------------------------------|--------------------------------------------------------------------|
+| `%gracetime_left_<time unit>%`                    | The time left in <time unit> rounded down                          |
+| `%gracetime_left_<time unit>_full%`               | The time left in <time unit> with decimals                         |
+| `%gracetime_left_<time unit>_truncated:<places>%` | The time left in <time unit> truncated to <places> decimal places. |
 
 ## Configuration
 ### Config.yml
@@ -188,6 +210,30 @@ placeholders:
   gracetime:
     # Placeholder for the grace time left.
     left:
+      # Negative grace time.
+      negatives:
+        # If the plugin should replace the negative time.
+        # true = replace the negative time.
+        # false = do not replace the negative time.
+        replace: true
+        # What to replace the negative time with.
+        replace-to: 0
+      # The below have the following options:
+      # %gracetime_left_ticks% = The time left in ticks rounded down.
+      # %gracetime_left_ticks_full% = The time left in ticks with decimals.
+      # %gracetime_left_ticks_truncated:<places>% = The time left in ticks truncated to <places> decimal places.
+      # %gracetime_left_seconds% = The time left in seconds rounded down.
+      # %gracetime_left_seconds_full% = The time left in seconds with decimals.
+      # %gracetime_left_seconds_truncated:<places>% = The time left in seconds truncated to <places> decimal places.
+      # %gracetime_left_minutes% = The time left in minutes rounded down.
+      # %gracetime_left_minutes_full% = The time left in minutes with decimals.
+      # %gracetime_left_minutes_truncated:<places>% = The time left in minutes truncated to <places> decimal places.
+      # %gracetime_left_hours% = The time left in hours rounded down.
+      # %gracetime_left_hours_full% = The time left in hours with decimals.
+      # %gracetime_left_hours_truncated:<places>% = The time left in hours truncated to <places> decimal places.
+      # %gracetime_left_days% = The time left in days rounded down.
+      # %gracetime_left_days_full% = The time left in days with decimals.
+      # %gracetime_left_days_truncated:<places>% = The time left in days truncated to <places> decimal places.
       # The time in ticks.
       ticks:
         # The simple placeholder.
@@ -200,6 +246,49 @@ placeholders:
         simple: "%gracetime_left_seconds%"
         # The fancy placeholder.
         fancy: "&a%gracetime_left_seconds% &fseconds"
+      # The time in minutes.
+      minutes:
+        # The simple placeholder.
+        simple: "%gracetime_left_minutes%"
+        # The fancy placeholder.
+        fancy: "&a%gracetime_left_minutes% &fminutes"
+      # The time in hours.
+      hours:
+        # The simple placeholder.
+        simple: "%gracetime_left_hours%"
+        # The fancy placeholder.
+        fancy: "&a%gracetime_left_hours% &fhours"
+      # The time in days.
+      days:
+        # The simple placeholder.
+        simple: "%gracetime_left_days%"
+        # The fancy placeholder.
+        fancy: "&a%gracetime_left_days% &fdays"
+      # The time in days.
+      weeks:
+        # The simple placeholder.
+        simple: "%gracetime_left_weeks%"
+        # The fancy placeholder.
+        fancy: "&a%gracetime_left_weeks% &fweeks"
+      # The time combined placeholder.
+      combined:
+        # Uses the fancy placeholders for each time unit - listed above.
+        # NOTE: All leading and trailing spaces will be removed.
+        # Options:
+        # %days% = days section.
+        # %hours% = hours section.
+        # %minutes% = minutes section.
+        # %seconds% = seconds section.
+        # %ticks% = ticks section.
+        fancy: "%weeks% %days% %hours% %minutes% %seconds% %ticks%"
+        sections:
+          only-show-if-not-zero: true
+          weeks: "&a%amount% &fweeks"
+          days: "&a%amount% &fdays"
+          hours: "&a%amount% &fhours"
+          minutes: "&a%amount% &fminutes"
+          seconds: "&a%amount% &fseconds"
+          ticks: "&a%amount% &fticks"
   # PVP status placeholders.
   status:
     # Placeholder for when PVP is toggled off.
