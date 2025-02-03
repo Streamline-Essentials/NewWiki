@@ -91,6 +91,9 @@ Use these as a key for the below placeholders.
 | `%pacifism_gracetime_left_<time unit>%`                         | The amount of <time unit> left until the player has their pvp toggled. This shows an integer.                       | 120 ticks: `120`<br/>142 ticks: `7.1`                |
 | `%pacifism_gracetime_left_<time unit>_fancy%`                   | Shows the <time unit> left, but in the fancy format you configured in the plugin's config.                          | 6000 ticks: `5 minutes`<br/>65 ticks: `3.25 seconds` |
 | `%pacifism_gracetime_left_combined%`                            | Will show the full and formatted amount of grace time left.                                                         | 1221 ticks: `1 minute 1 second 1 tick`               |
+| `%pacifism_cooldown_left_<time unit>%`                          | The amount of <time unit> left until the player can toggle their pvp again (to enabled). This shows an integer.     | 120 ticks: `120`<br/>142 ticks: `7.1`                |
+| `%pacifism_cooldown_left_<time unit>_fancy%`                    | Shows the <time unit> left, but in the fancy format you configured in the plugin's config.                          | 6000 ticks: `5 minutes`<br/>65 ticks: `3.25 seconds` |
+| `%pacifism_cooldown_left_combined%`                             | Will show the full and formatted amount of toggle cooldown left.                                                    | 1221 ticks: `1 minute 1 second 1 tick`               |
 | `%pacifism_status_simple%`                                      | The status of the player's PVP. This will show either "true" or "false".                                            | `true`<br/>`false`                                   |
 | `%pacifism_status_fancy%`                                       | The status of the player's PVP. This will show the value you set in the config depending on if it is true or false. | `ON`<br/>`OFF`                                       |
 | `%pacifism_as_<player>_<one of the above without "pacifism_">%` | Does the above, but as `<player>`. Remember to replace the fields between the `<` and the `>` for both arguments.   | `%pacifism_as_Drakified_status_simple%`              |
@@ -98,14 +101,17 @@ Use these as a key for the below placeholders.
 #### Formatting your Placeholders
 Use the following placeholders in your `placeholders` config section to format the output.
 
-| Placeholder                                       | Description                                                        |
-|---------------------------------------------------|--------------------------------------------------------------------|
-| `%gracetime_left_<time unit>%`                    | The time left in <time unit> rounded down                          |
-| `%gracetime_left_<time unit>_full%`               | The time left in <time unit> with decimals                         |
-| `%gracetime_left_<time unit>_truncated:<places>%` | The time left in <time unit> truncated to <places> decimal places. |
+| Placeholder                                                | Description                                                                       |
+|------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| `%gracetime_left_<time unit>%`                             | The time left in <time unit> rounded down                                         |
+| `%gracetime_left_<time unit>_full%`                        | The time left in <time unit> with decimals                                        |
+| `%gracetime_left_<time unit>_truncated:<places>%`          | The time left in <time unit> truncated to <places> decimal places.                |
+| `%cooldown_left_<time unit>%`                              | The toggle cooldown left in <time unit> rounded down                              |
+| `%cooldown_left_<time unit>_full%`                         | The toggle cooldown left in <time unit> with decimals                             |
+| `%cooldown_left_<time unit>_truncated:<places>%`           | The toggle cooldown left in <time unit> truncated to <places> decimal places.     |
 
 ## Configuration
-### Config.yml
+### `config.yml`
 ```YAML
 player:
   # Grace Period.
@@ -289,6 +295,89 @@ placeholders:
           minutes: "&a%amount% &fminutes"
           seconds: "&a%amount% &fseconds"
           ticks: "&a%amount% &fticks"
+  # Cooldown placeholders.
+  cooldown:
+    # Placeholder for the grace time left.
+    left:
+      # Negative grace time.
+      negatives:
+        # If the plugin should replace the negative time.
+        # true = replace the negative time.
+        # false = do not replace the negative time.
+        replace: true
+        # What to replace the negative time with.
+        replace-to: 0
+      # The below have the following options:
+      # %cooldown_left_ticks% = The time left in ticks rounded down.
+      # %cooldown_left_ticks_full% = The time left in ticks with decimals.
+      # %cooldown_left_ticks_truncated:<places>% = The time left in ticks truncated to <places> decimal places.
+      # %cooldown_left_seconds% = The time left in seconds rounded down.
+      # %cooldown_left_seconds_full% = The time left in seconds with decimals.
+      # %cooldown_left_seconds_truncated:<places>% = The time left in seconds truncated to <places> decimal places.
+      # %cooldown_left_minutes% = The time left in minutes rounded down.
+      # %cooldown_left_minutes_full% = The time left in minutes with decimals.
+      # %cooldown_left_minutes_truncated:<places>% = The time left in minutes truncated to <places> decimal places.
+      # %cooldown_left_hours% = The time left in hours rounded down.
+      # %cooldown_left_hours_full% = The time left in hours with decimals.
+      # %cooldown_left_hours_truncated:<places>% = The time left in hours truncated to <places> decimal places.
+      # %cooldown_left_days% = The time left in days rounded down.
+      # %cooldown_left_days_full% = The time left in days with decimals.
+      # %cooldown_left_days_truncated:<places>% = The time left in days truncated to <places> decimal places.
+      # The time in ticks.
+      ticks:
+        # The simple placeholder.
+        simple: "%cooldown_left_ticks%"
+        # The fancy placeholder.
+        fancy: "&a%cooldown_left_ticks% &fticks"
+      # The time in seconds.
+      seconds:
+        # The simple placeholder.
+        simple: "%cooldown_left_seconds%"
+        # The fancy placeholder.
+        fancy: "&a%cooldown_left_seconds% &fseconds"
+      # The time in minutes.
+      minutes:
+        # The simple placeholder.
+        simple: "%cooldown_left_minutes%"
+        # The fancy placeholder.
+        fancy: "&a%cooldown_left_minutes% &fminutes"
+      # The time in hours.
+      hours:
+        # The simple placeholder.
+        simple: "%cooldown_left_hours%"
+        # The fancy placeholder.
+        fancy: "&a%cooldown_left_hours% &fhours"
+      # The time in days.
+      days:
+        # The simple placeholder.
+        simple: "%cooldown_left_days%"
+        # The fancy placeholder.
+        fancy: "&a%cooldown_left_days% &fdays"
+      # The time in days.
+      weeks:
+        # The simple placeholder.
+        simple: "%cooldown_left_weeks%"
+        # The fancy placeholder.
+        fancy: "&a%cooldown_left_weeks% &fweeks"
+      # The time combined placeholder.
+      combined:
+        # Uses the fancy placeholders for each time unit - listed above.
+        # NOTE: All leading and trailing spaces will be removed.
+        # Options:
+        # %days% = days section.
+        # %hours% = hours section.
+        # %minutes% = minutes section.
+        # %seconds% = seconds section.
+        # %ticks% = ticks section.
+        fancy: "%weeks% %days% %hours% %minutes% %seconds% %ticks%"
+        sections:
+          only-show-if-not-zero: true
+          weeks: "&a%amount% &fweeks"
+          days: "&a%amount% &fdays"
+          hours: "&a%amount% &fhours"
+          minutes: "&a%amount% &fminutes"
+          seconds: "&a%amount% &fseconds"
+          ticks: "&a%amount% &fticks"
   # PVP status placeholders.
   status:
     # Placeholder for when PVP is toggled off.
@@ -329,4 +418,77 @@ database:
   database: 'pacifism'
   # The name of the SQLite file to use (when using SQLite).
   sqlite-file-name: 'pacifism.db'
+```
+
+### `messages.yml`
+```YAML
+# Placeholders used for a player's PVP status being toggled.
+status:
+  enabled: "&aenabled"
+  disabled: "&cdisabled"
+
+###########################################
+# Global (all) feedback message features:
+# Setting the value as blank ("") will
+# disable the feedback message completely.
+###########################################
+
+# Feedback messages for when a player's PVP is toggled.
+toggle:
+  success:
+    self:
+      self: "&eYou have %status% &eyour PVP&8!"
+      upon:
+        enable: "&7(You will be able to take damage from other players.)"
+        disable: "&7(You will not be able to take damage from other players.)"
+    other:
+      self: "&eYou have %status% &b%player_name%&e's PVP&8!"
+      other: "&eYour PVP has been %status% &eby &b%player_name%&8!"
+      upon:
+        enable: "&7(They will be able to take damage from other players.)"
+        disable: "&7(They will not be able to take damage from other players.)"
+  cannot:
+    self:
+      self: "&cYou cannot toggle your PVP&8!"
+      time-left: "&cYou have &f%cooldown_left_seconds% &cseconds left before you can toggle your PVP again&8!"
+    other:
+      self: "&cYou cannot toggle &b%player_name%&c's PVP&8!"
+      time-left: "&cThey have &f%cooldown_left_seconds% &cseconds left before they can toggle their PVP again&8!"
+
+# Feedback messages for when a player's PVP is set.
+set:
+  success:
+    self:
+      self: "&eYou have %status% &eyour PVP&8!"
+      upon:
+        enable: "&7(You will be able to take damage from other players.)"
+        disable: "&7(You will not be able to take damage from other players.)"
+    other:
+      self: "&eYou have %status% &b%player_name%&e's PVP&8!"
+      other: "&eYour PVP has been %status% &eby &b%player_name%&8!"
+      upon:
+        enable: "&7(They will be able to take damage from other players.)"
+        disable: "&7(They will not be able to take damage from other players.)"
+  cannot:
+    self:
+      self: "&cYou cannot toggle your PVP&8!"
+      time-left: "&cYou have &f%cooldown_left_seconds% &cseconds left before you can toggle your PVP again&8!"
+    other:
+      self: "&cYou cannot toggle &b%player_name%&c's PVP&8!"
+      time-left: "&cThey have &f%cooldown_left_seconds% &cseconds left before they can toggle their PVP again&8!"
+
+# Feedback messages for when a player's grace-time is set.
+set-grace-time:
+  success:
+    self:
+      self: "&eYou have set your grace-time to &b%gracetime_left_seconds% &eseconds&8!"
+    other:
+      self: "&eYou have set &b%player_name%&e's grace-time to &b%gracetime_left_seconds% &eseconds&8!"
+      other: "&eYour grace-time has been set to &b%gracetime_left_seconds% &eseconds&8!"
+
+# Feedback messages for when a player tries to hurt another player.
+pvp:
+  disabled:
+    self: "&cYou have PVP disabled! You cannot hurt other players."
+    other: "&cThat player has PVP disabled! You cannot hurt them."
 ```
