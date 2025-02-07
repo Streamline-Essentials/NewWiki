@@ -5,7 +5,7 @@ Origins on Steroids is a Modpack originally made for the Shadow Den SMP. It is a
 ## Installation
 > 1. Download CurseForge and install.
 > ![Download](curseforge-download.png)
->     - https://www.curseforge.com/download/app (Use the standalone version.)
+>     - [**https://www.curseforge.com/download/app**](https://www.curseforge.com/download/app) (Use the standalone version.)
 >     - Set up for Minecraft:
 >       1. Click gear in bottom right.
 >       ![curseforge-settings.png](curseforge-settings.png)

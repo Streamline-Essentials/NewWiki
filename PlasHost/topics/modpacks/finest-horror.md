@@ -5,7 +5,7 @@ Horror at its Finest is a modpack designed to insight fear in the hearts of men 
 ## Installation
 > 1. Download CurseForge and install.
 > ![Download](curseforge-download.png)
->     - [https://www.curseforge.com/download/app](https://www.curseforge.com/download/app) (Use the standalone version.)
+>     - [**https://www.curseforge.com/download/app**](https://www.curseforge.com/download/app) (Use the standalone version.)
 >     - Set up for Minecraft:
 >       1. Click gear in bottom right.
 >       ![curseforge-settings.png](curseforge-settings.png)
