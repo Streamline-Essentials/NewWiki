@@ -13,7 +13,7 @@ The "Community" part of the name is because it is a modpack made for people to c
                           ![curseforge-minecraft.png](curseforge-minecraft.png)
 >       2. Configure Skip Launcher with CurseForge and Java memory.
                   ![curseforge-beta-and-memory.png](curseforge-beta-and-memory.png)
-> 2. Search for up "MrDrakify" in the modpacks browser.
+> 2. Search for up "MrDrak" in the modpacks browser.
 > 3. Click install for "Community in the Skies".
       ![cf-cits-install.png](cf-cits-install.png)
 > 4. Let it install.
