@@ -4,35 +4,35 @@
     <var name="product" value="Writerside"/>
 
     <var name="sl.module.discordmodule.version" value="1.16.0"/>
-    <var name="sl.module.discordmodule.download" value="https://storage.plas.host/s/m22RzSj6GHLcAf2"/>
+    <var name="sl.module.discordmodule.download" value="https://storage.plas.host/index.php/s/rLqLebzTpyBDETs"/>
     <var name="sl.module.discordmodule.description" value="A module dealing with Minecraft and Discord integration."/>
 
     <var name="sl.module.mvinvextras.version" value="1.0.0"/>
-    <var name="sl.module.mvinvextras.download" value="https://storage.plas.host/s/NborMiRSgxgLS5B"/>
+    <var name="sl.module.mvinvextras.download" value="https://storage.plas.host/index.php/s/5mZTfJerGdYPzgE"/>
     <var name="sl.module.mvinvextras.description" value="A module dealing with extra features for MVInv."/>
 
     <var name="sl.module.proxprotect.version" value="1.2.0"/>
-    <var name="sl.module.proxprotect.download" value="https://storage.plas.host/s/YKT7Ro6nnJ8g8NK"/>
+    <var name="sl.module.proxprotect.download" value="https://storage.plas.host/index.php/s/So97eCZfWAj7tDJ"/>
     <var name="sl.module.proxprotect.description" value="A module dealing making sure that you do not get back-doored."/>
 
     <var name="sl.module.rpu.version" value="1.14.0"/>
-    <var name="sl.module.rpu.download" value="https://storage.plas.host/s/L2imcS5SCj8sowZ"/>
+    <var name="sl.module.rpu.download" value="https://storage.plas.host/index.php/s/DWSi9aitF9sn7A2"/>
     <var name="sl.module.rpu.description" value="A module dealing with Minecraft resource packs."/>
 
     <var name="sl.module.runon.version" value="1.1.0"/>
-    <var name="sl.module.runon.download" value="https://storage.plas.host/s/asYornd2SZewbna"/>
+    <var name="sl.module.runon.download" value="https://storage.plas.host/index.php/s/23NfQsKZstqWM8j"/>
     <var name="sl.module.runon.description" value="A module dealing with running commands on other servers (or the proxy)."/>
 
     <var name="sl.module.simplelogger.version" value="1.1.0"/>
-    <var name="sl.module.simplelogger.download" value="https://storage.plas.host/s/QszJLNT9GSAixzf"/>
+    <var name="sl.module.simplelogger.download" value="https://storage.plas.host/index.php/s/3bGwC62mJ2aB4bd"/>
     <var name="sl.module.simplelogger.description" value="Logs all commands to Discord."/>
 
     <var name="sl.module.streamersunite.version" value="1.1.0"/>
-    <var name="sl.module.streamersunite.download" value="https://storage.plas.host/s/CGsk3xscH6FmBXr"/>
+    <var name="sl.module.streamersunite.download" value="https://storage.plas.host/index.php/s/y45qLgDXqgLSZPe"/>
     <var name="sl.module.streamersunite.description" value="A module dealing with streamers."/>
 
     <var name="sl.module.slmessaging.version" value="1.15.0"/>
-    <var name="sl.module.slmessaging.download" value="https://storage.plas.host/s/bTWBC4ATwZnatFf"/>
+    <var name="sl.module.slmessaging.download" value="https://storage.plas.host/index.php/s/Z5m8LqqjRDwHEf7"/>
     <var name="sl.module.slmessaging.description" value="A module dealing with:
 
 - Network-wide or single server `/msg` ing.
@@ -45,20 +45,20 @@
     - Chat Rooms."/>
 
     <var name="sl.module.slmotd.version" value="1.5.0"/>
-    <var name="sl.module.slmotd.download" value="https://storage.plas.host/s/crR5XdSBZXXtWeN"/>
+    <var name="sl.module.slmotd.download" value="https://storage.plas.host/index.php/s/HkjAzyTaAH54gcA"/>
     <var name="sl.module.slmotd.description" value="A module dealing with the MOTD.
 
 - An MOTD is what you see on your Minecraft server page when you are about to join your server."/>
 
     <var name="sl.module.slredirect.version" value="1.6.0"/>
-    <var name="sl.module.slredirect.download" value="https://storage.plas.host/s/9BKDnWxA5GeAAbN"/>
+    <var name="sl.module.slredirect.download" value="https://storage.plas.host/index.php/s/JnrBEZSzw9S93tJ"/>
     <var name="sl.module.slredirect.description" value="A module dealing with redirecting players after a server goes down.
 
 - Example:
     - Redirecting players from `BEDWARS_HUB_1` to `LOBBY_1` when `BEDWARS_HUB_1` crashes or restarts."/>
 
     <var name="sl.module.slutilities.version" value="1.19.0"/>
-    <var name="sl.module.slutilities.download" value="https://storage.plas.host/s/aLHFRrrdstXXRFB"/>
+    <var name="sl.module.slutilities.download" value="https://storage.plas.host/index.php/s/9Zn8JD9JysGpP2j"/>
     <var name="sl.module.slutilities.description" value="A module dealing with:
 
 - Functions / Scripts / Aliases.
@@ -76,11 +76,11 @@
 - More…"/>
 
     <var name="sl.module.streamquests.version" value="1.1.0"/>
-    <var name="sl.module.streamquests.download" value="https://storage.plas.host/s/QbY9yJskcNtPcB2"/>
+    <var name="sl.module.streamquests.download" value="https://storage.plas.host/index.php/s/QMFnbo64GdMwDZs"/>
     <var name="sl.module.streamquests.description" value="A module dealing with Quests."/>
 
     <var name="sl.module.tabsl.version" value="1.2.0"/>
-    <var name="sl.module.tabsl.download" value="https://storage.plas.host/s/TdHpfNpPENQCGii"/>
+    <var name="sl.module.tabsl.download" value="https://storage.plas.host/index.php/s/ZajtknM5eKtqWRw"/>
     <var name="sl.module.tabsl.description" value="A module dealing with Streamline compatibility with the TAB plugin.
 
 - Adds:
